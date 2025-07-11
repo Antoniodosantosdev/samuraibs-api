@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: samuraibs-api
+    env: node
+    plan: free
+    buildCommand: yarn && yarn build
+    startCommand: yarn start
+    # Remova ou ajuste rootDir para a raiz do projeto
+    rootDir: .
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: APP_API_URL
+        value: https://samuraibs-api.onrender.com
+      - key: APP_WEB_URL
+        value: https://samuraibs-web.onrender.com
+      - key: APP_SECRET
+        value: samuraibs
+      - key: MAIL_DRIVER
+        value: ethereal
+      - key: STORAGE_DRIVER
+        value: disk
+      - key: POSTGRES_HOST
+        value: aws-0-sa-east-1.pooler.supabase.com
+      - key: POSTGRES_PORT
+        value: 5432
+      - key: POSTGRES_USER
+        value: postgres.xazzvflfwnknhriwixry
+      - key: POSTGRES_PASS
+        value: aY%LJPC6aLD57t@
+      - key: POSTGRES_NAME
+        value: postgres
+      - key: ALL_DAYS
+        value: 0
