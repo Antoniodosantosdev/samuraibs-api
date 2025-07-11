@@ -6,7 +6,7 @@ services:
     buildCommand: yarn && yarn build
     startCommand: yarn start
     # Remova ou ajuste rootDir para a raiz do projeto
-    rootDir: .
+    rootDir: samurai-apps/api
     envVars:
       - key: NODE_ENV
         value: production
